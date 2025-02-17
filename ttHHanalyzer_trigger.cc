@@ -467,9 +467,11 @@ bool ttHHanalyzer::selectObjects(event *thisEvent){
     thisEvent->getStatsComb(thisEvent->getSelbJets(), thisEvent->getSelLeptons(), lbjetStat);
     
     
-    if(thisEvent->getSelLeptons()->at(0)->charge == thisEvent->getSelLeptons()->at(1)->charge){
-    	return false;
+    if (thisEvent->getSelLeptons()->size() == 2) {
+        if (thisEvent->getSelLeptons()->at(0)->charge == thisEvent->getSelLeptons()->at(1)->charge) {
+	return false;
     }
+}
 
     cutflow["nOpositeChargedLep"]+=1;
     hCutFlow->Fill("nOpositeChargedLep",1);
