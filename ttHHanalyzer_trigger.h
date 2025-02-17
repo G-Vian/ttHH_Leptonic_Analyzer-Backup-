@@ -30,23 +30,23 @@ const float cZMass = 91.;
 
 
 map<std::string, float> cut { 
-    {"nJets", 3} // nJets higher than 
-    , {"nLeptons", 2} // nLepton equals to
+    {"nJets", 4} // nJets higher than 
+    , {"nLeptons", 1} // nLepton equals to (semi leptonic)
     //    , {"nVetoLeptons", 0} // nVetoLepton equals to
-    , {"MET", 40} // MET higher than
-    , {"nbJets", 2} //nBjets higher than
+    , {"MET", 20} // MET higher than
+    , {"nbJets", 3} //nBjets higher than
     , {"jetPt", 30} // jet pT higher than
-    , {"leadElePt", 25} // leadElectron pT higher than
-    , {"leadMuonPt", 25} // leadMuon pT higher than
+    , {"leadElePt", 30} // leadElectron pT higher than
+    , {"leadMuonPt", 29} // leadMuon pT higher than
     , {"subLeadElePt", 15} // subLeadElectron pT higher than
     , {"subLeadMuonPt", 15} // subLeadMuon pT higher than
     // , {"vetoLepPt", 15} // lepton pT higher than
     , {"boostedJetPt", 10} // boostedJet pT higher than
     , {"hadHiggsPt", 20} // hadronic Higgs pT higher than
-    , {"jetEta", 2.4} // jet eta higher than
-    , {"eleEta", 2.4} // electron eta higher than
-    , {"muonEta", 2.4} // muon eta higher than
-    , {"boostedJetEta", 2.4} // boostedJet eta higher than
+    , {"jetEta", 2.5} // jet eta higher than
+    , {"eleEta", 2.5} // electron eta higher than
+    , {"muonEta", 2.5} // muon eta higher than
+    , {"boostedJetEta", 2.5} // boostedJet eta higher than
     , {"muonIso", 0.25} // muon isolation less than
     , {"eleIso", 0.06}  // ele isolation less than
     , {"jetID", 6}   // pass tight and tightLepVeto ID
@@ -909,8 +909,8 @@ class ttHHanalyzer {
 
     //fifo_map<std::string,int> cutflow{{"noCut", 0}, {"nlepton==2", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"MET>40", 0}};
     //fifo_map<std::string,float> cutflow_w{{"noCut", 0}, {"nlepton==2", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"MET>40", 0}};
-    fifo_map<std::string,int> cutflow{{"noCut", 0}, {"nTrigger", 0}, {"nFilter", 0}, {"nPV", 0}, {"njets>3", 0}, {"nbjets>2", 0}, {"nlepton==2", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"nTotal", 0}};
-    fifo_map<std::string,int> cutflow_w{{"noCut", 0}, {"njets>3", 0}, {"nbjets>2", 0}, {"nlepton==2", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"nTotal", 0}};
+    fifo_map<std::string,int> cutflow{{"noCut", 0}, {"nTrigger", 0}, {"nFilter", 0}, {"nPV", 0}, {"njets>4", 0}, {"nbjets>3", 0}, {"nlepton==1", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"nTotal", 0}};
+    fifo_map<std::string,int> cutflow_w{{"noCut", 0}, {"njets>4", 0}, {"nbjets>3", 0}, {"nlepton==1", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"nTotal", 0}};
 
     //    std::unordered_map<std::string, int> cutflow {{"noCut", 0}, {"njets>3", 0}, {"nbjets>2", 0}, {"nlepton==2", 0}, {"nOpositeChargedLep", 0}, {"nMassCut", 0}, {"nTotal", 0}};
 
