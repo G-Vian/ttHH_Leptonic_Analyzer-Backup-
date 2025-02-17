@@ -914,13 +914,13 @@ void ttHHanalyzer::fillHistos(event * thisEvent){
     hleptonNumber->Fill(thisEvent->getnSelLepton(),_weight*thisEvent->getbTagSys());
 
 
-    if(thisEvent->getnSelMuon() == 1){
+    if(thisEvent->getnSelMuon() == 2){
 	hDiMuonMass->Fill(thisEvent->getSelMuonsMass(),_weight*thisEvent->getbTagSys());
 	hDiMuonPT->Fill(thisEvent->getSelMuonsPT(),_weight*thisEvent->getbTagSys());
 	hDiMuonEta->Fill(thisEvent->getSelMuonsEta(),_weight*thisEvent->getbTagSys());
     }
 
-    if(thisEvent->getnSelElectron() == 1){
+    if(thisEvent->getnSelElectron() == 2){
 	hDiElectronMass->Fill(thisEvent->getSelElectronsMass(),_weight*thisEvent->getbTagSys());
 	hDiElectronPT->Fill(thisEvent->getSelElectronsPT(),_weight*thisEvent->getbTagSys());
 	hDiElectronEta->Fill(thisEvent->getSelElectronsEta(),_weight*thisEvent->getbTagSys());
