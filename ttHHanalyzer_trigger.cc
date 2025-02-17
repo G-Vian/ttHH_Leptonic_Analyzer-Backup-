@@ -441,27 +441,27 @@ bool ttHHanalyzer::selectObjects(event *thisEvent){
 	return false;
     }
     
-    cutflow["njets>3"]+=1;
-    hCutFlow->Fill("njets>3",1);
-    hCutFlow_w->Fill("njets>3",_weight);
+    cutflow["njets>4"]+=1;
+    hCutFlow->Fill("njets>4",1);
+    hCutFlow_w->Fill("njets>4",_weight);
     
 	
     if(!(thisEvent->getnbJet() > cut["nbJets"])){
 	return false;
     }
     
-    cutflow["nbjets>2"]+=1;
-    hCutFlow->Fill("nbjets>2",1);
-    hCutFlow_w->Fill("nbjets>2",_weight);
+    cutflow["nbjets>3"]+=1;
+    hCutFlow->Fill("nbjets>3",1);
+    hCutFlow_w->Fill("nbjets>3",_weight);
     
     
     if(!(thisEvent->getnSelLepton() == cut["nLeptons"])){
 	return false;
     }
     
-    cutflow["nlepton==2"]+=1;
-    hCutFlow->Fill("nlepton==2",1);
-    hCutFlow_w->Fill("nlepton==2",_weight);
+    cutflow["nlepton==1"]+=1;
+    hCutFlow->Fill("nlepton==1",1);
+    hCutFlow_w->Fill("nlepton==1",_weight);
 	
     thisEvent->getStatsComb(thisEvent->getSelJets(), thisEvent->getSelLeptons(), ljetStat);
     thisEvent->getStatsComb(thisEvent->getSelbJets(), thisEvent->getSelLeptons(), lbjetStat);
@@ -504,7 +504,7 @@ bool ttHHanalyzer::selectObjects(event *thisEvent){
     	}
     }
 	
-    cutflow["MET>40"]+=1; 
+    cutflow["MET>20"]+=1; 
 
     cutflow["nTotal"]+=1;
     hCutFlow->Fill("nTotal",1);
@@ -914,13 +914,13 @@ void ttHHanalyzer::fillHistos(event * thisEvent){
     hleptonNumber->Fill(thisEvent->getnSelLepton(),_weight*thisEvent->getbTagSys());
 
 
-    if(thisEvent->getnSelMuon() == 2){
+    if(thisEvent->getnSelMuon() == 1){
 	hDiMuonMass->Fill(thisEvent->getSelMuonsMass(),_weight*thisEvent->getbTagSys());
 	hDiMuonPT->Fill(thisEvent->getSelMuonsPT(),_weight*thisEvent->getbTagSys());
 	hDiMuonEta->Fill(thisEvent->getSelMuonsEta(),_weight*thisEvent->getbTagSys());
     }
 
-    if(thisEvent->getnSelElectron() == 2){
+    if(thisEvent->getnSelElectron() == 1){
 	hDiElectronMass->Fill(thisEvent->getSelElectronsMass(),_weight*thisEvent->getbTagSys());
 	hDiElectronPT->Fill(thisEvent->getSelElectronsPT(),_weight*thisEvent->getbTagSys());
 	hDiElectronEta->Fill(thisEvent->getSelElectronsEta(),_weight*thisEvent->getbTagSys());
