@@ -43,7 +43,7 @@ make -j4
 ```
 ## All in one line (faster):
 ```bash
-git clone https://github.com/G-Vian/ttHH_Leptonic_Analyzer.git && wget https://cernbox.cern.ch/remote.php/dav/public-files/xPBQqigATEjgFQb/TTH.tar.gz && tar -zxvf TTH.tar.gz && rm -rf TTH.tar.gz && mv TTH  ttHH_Leptonic_Analyzer/. && cd ttHH_Leptonic_Analyzer && cmsenv && source setup.sh  && make -j4 
+git clone https://github.com/G-Vian/ttHH_Leptonic_Analyzer-Backup- && wget https://cernbox.cern.ch/remote.php/dav/public-files/xPBQqigATEjgFQb/TTH.tar.gz && tar -zxvf TTH.tar.gz && rm -rf TTH.tar.gz && mv TTH  ttHH_Leptonic_Analyzer-Backup-/. && cd ttHH_Leptonic_Analyzer-Backup- && cmsenv && source setup.sh  && make -j4 
 ```
 
 
